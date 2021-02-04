@@ -1,0 +1,72 @@
+Crée une classe User, qui aura comme attributs :
+
+    Un first_name, qui est un string
+    Un last_name, qui est un string
+    Un description, qui est un text
+    Un email, qui est un string
+    Un age, qui est un integer
+    
+
+Crée une classe City, qui aura comme attributs :
+
+    Un name, qui est un string
+    Un zip_code, qui est un string
+
+Crée une classe Gossip, qui aura comme attributs :
+
+    Un title, qui est un string
+    Un content, qui est un text
+
+Crée une classe Tag, qui aura comme attributs :
+
+    Un title, qui est un string
+
+Crée une classe PrivateMessage, qui aura comme attributs :
+
+    Un content, qui est un text
+
+=================================================================================
+Creation des tables
+=================================================================================
+
+rails g model User first_name:string last_name:string description:text email:string age:integer
+
+rails g model City name:string zip_code:string
+
+rails g model Gossip title:string content:text
+
+rails g model Tag title:string
+
+rails g model PrivateMessage content:text
+
+rails g model Like content:text
+
+rails g model Comment content:text
+
+===========================================================================================
+Creation relations
+===========================================================================================
+
+class User < ApplicationRecord
+  belongs_to :city
+  has_many :gossips
+  has_many :comments
+  has_many :likes
+end
+
+class Gossip < ApplicationRecord
+  belongs_to :user
+  has_many :likes
+  has_many :comments
+end
+
+class Like < ApplicationRecord
+  belongs_to :user
+  belongs_to :gossip
+end
+
+class Comment < ApplicationRecord
+  belongs_to :user
+  belongs_to :gossip
+end
+
