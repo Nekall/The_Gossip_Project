@@ -1,4 +1,44 @@
-2.3. The Gossip Project
+The Gossip Project
+
+J'ai malheureusement pris beaucoup de temps sur les deux premiers exo, j'ai donc pas pu avancer beaucoup sur ce projet. 
+
+
+<img src=https://github.com/Nekall/The_Gossip_Project/blob/main/Diagramme%20The%20Gossip%20Project.png>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 2.3.1 Le pitch
 
 Allez, on va poser les bases de notre fameux Gossip Project pour le transcrire en Rails. Et comme je te l'ai expliqué, la première étape est la modélisation de sa BDD !
